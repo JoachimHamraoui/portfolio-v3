@@ -1,16 +1,16 @@
 import { ModeToggle } from "@/components/ModeToggle";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
-import { circle } from "framer-motion/client";
 
 export default function Home() {
   return (
     <div className="w-full h-screen flex items-center justify-center">
-      <SmoothCursor cursor={<div className="w-6 h-6 rounded-full border-2 border-white"></div>} />
+      <ModeToggle />
+      <SmoothCursor cursor={<div className="w-6 h-6 rounded-full backdrop-invert"></div>} />
       <div className="w-[1240px] h-screen flex flex-col justify-center">
         <h1 className="text-8xl font-bold mb-4">
           Hi, I&lsquo;m{" "}
-          <AuroraText colors={["#FF0080", "#7928CA", "#0070F3", "#38bdf8"]}>
+          <AuroraText colors={["#f035d7", "#7928CA", "#ff9d0a"]}>
             Joachim
           </AuroraText>
         </h1>
