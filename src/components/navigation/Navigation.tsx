@@ -10,7 +10,7 @@ import LightLogo from "../../../public/logo-light-mode.png";
 import Link from "next/link";
 
 export const Navigation = () => {
-  const { theme, resolvedTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
