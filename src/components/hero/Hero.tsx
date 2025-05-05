@@ -1,10 +1,16 @@
-'use client'
+'use client';
+
 import { AuroraText } from "@/components/magicui/aurora-text";
-import Lottie from "lottie-react";
 import LightMouse from "../../../public/scrolldown-lightmode.json";
 import DarkMouse from "../../../public/scrolldown-darkmode.json";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
+
+// Dynamically import the client-only Lottie component
+const LottieClientOnly = dynamic(() => import('../clients/LottieClientOnly'), {
+  ssr: false,
+});
 
 export const Hero = () => {
   const { resolvedTheme } = useTheme();
@@ -27,7 +33,7 @@ export const Hero = () => {
         Turning Ideas into User-Focused Digital Products
       </p>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-6">
-        <Lottie animationData={isDark ? DarkMouse : LightMouse} loop={true} />
+        <LottieClientOnly animationData={isDark ? DarkMouse : LightMouse} loop={true} />
       </div>
     </div>
   );
