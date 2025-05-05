@@ -161,6 +161,15 @@
   --color-5: oklch(90.7% 0.231 133);
 }
 
+*,
+*::before,
+*::after,
+html,
+:root {
+  cursor: none !important;
+}
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
