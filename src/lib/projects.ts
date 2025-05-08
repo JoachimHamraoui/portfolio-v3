@@ -23,7 +23,7 @@ export interface Project {
         name: "Chat App", 
         description: "Docker, NodeJS, API", 
         github: "https://github.com/JoachimHamraoui/chat-app", 
-        live: "", 
+        live: "https://chat-app-k9ue.onrender.com/", 
         techstack: ["NodeJS", "Websockets", "React"],
         keyImage: "/showcase/chat-app.png"
     },
