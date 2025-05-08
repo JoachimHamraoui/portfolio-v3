@@ -46,7 +46,7 @@ export const ProjectCard = ({
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-foreground rounded-full p-2 text-foreground hover:bg-foreground hover:text-background duration-300 ease-in-out"
+              className="border border-[#fefefe] rounded-full p-2 text-[#fefefe] hover:bg-[#fefefe] hover:text-[#121212] duration-300 ease-in-out"
             >
               <FaGithub size={20} />
             </a>
@@ -56,7 +56,7 @@ export const ProjectCard = ({
               href={live}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-foreground rounded-full p-2 text-foreground hover:bg-foreground hover:text-background duration-300 ease-in-out"
+              className="border border-[#fefefe] rounded-full p-2 text-[#fefefe] hover:bg-[#fefefe] hover:text-[#121212] duration-300 ease-in-out"
             >
               <RxGlobe size={20} />
             </a>
