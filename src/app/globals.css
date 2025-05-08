@@ -84,14 +84,14 @@
 :root {
   /* scrollbar-gutter: stable; */
   --radius: 0.625rem;
-  --background: #FAF9F6;
+  --background: #fefefe;
   --foreground: #121212;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary-foreground: #fefefe;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -124,13 +124,13 @@
 
 .dark {
   --background: #121212;
-  --foreground: #FAF9F6;
+  --foreground: #Fefefe;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary-foreground: #121212;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -161,6 +161,16 @@
   --color-5: oklch(90.7% 0.231 133);
 }
 
+*,
+*::before,
+*::after,
+html,
+:root {
+  cursor: none !important;
+  
+}
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -168,4 +178,27 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
 }
