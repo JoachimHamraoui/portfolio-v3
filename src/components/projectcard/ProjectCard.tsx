@@ -15,6 +15,7 @@ interface ProjectCardProps {
   variants: Variants;
 }
 
+
 export const ProjectCard = ({
   name,
   description,

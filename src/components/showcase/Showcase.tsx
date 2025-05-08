@@ -45,15 +45,10 @@ export const Showcase = () => {
       >
         {projects.map((project) => (
           <ProjectCard
-            key={project.id}
-            name={project.name}
-            description={project.description}
-            keyImage={project.keyImage}
-            github={project.github}
-            live={project.live}
-            techstack={project.techstack}
-            variants={fadeUpVariant}
-          />
+          key={project.id}
+          {...project}
+          variants={fadeUpVariant}
+        />
         ))}
       </motion.div>
     </div>
