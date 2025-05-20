@@ -2,29 +2,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { projects } from "@/lib/projects";
+import { fadeUpVariant, containerVariant } from "@/lib/motionVariants";
 import { ProjectCard } from "../projectcard/ProjectCard"; // adjust path if needed
 
 export const Showcase = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  const containerVariant = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2, // delay between children
-      },
-    },
-  };
-
-  const fadeUpVariant = {
-    hidden: { opacity: 0, y: 70 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
 
   return (
     <div ref={ref} className="w-[1240px] mx-auto flex flex-col mt-12 space-y-6">
