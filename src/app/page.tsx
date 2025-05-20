@@ -2,7 +2,8 @@ import { Navigation } from "@/components/navigation/Navigation";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { Hero } from "@/components/hero/Hero";
 import { Showcase } from "@/components/showcase/Showcase";
-import { TechStack } from "@/components/techstack/TechStack";
+import { About } from "@/components/about/About";
+// import { TechStack } from "@/components/techstack/TechStack";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Showcase />
-      <TechStack />
+      {/* <TechStack /> */}
+      <About />
     </div>
   );
 }
