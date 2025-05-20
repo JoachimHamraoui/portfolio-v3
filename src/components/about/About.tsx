@@ -6,11 +6,12 @@ import { useRef } from "react";
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ExtraInfo } from "./extraInfo";
 export const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <div ref={ref} className="w-[1240px] mx-auto flex flex-col mt-12 space-y-6">
+    <div ref={ref} className="w-[1240px] flex flex-col mt-12 space-y-6">
       <motion.h2
         className="text-4xl font-bold"
         variants={fadeUpVariant}
@@ -51,9 +52,8 @@ export const About = () => {
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
           <TabsContent value="tab-1">
-            <p className="text-muted-foreground p-4 pt-1 text-center text-xs">
-              Content for Tab 1
-            </p>
+
+              <ExtraInfo />
           </TabsContent>
           <TabsContent value="tab-2">
             <p className="text-muted-foreground p-4 pt-1 text-center text-xs">
