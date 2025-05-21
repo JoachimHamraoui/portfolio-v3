@@ -1,9 +1,10 @@
 "use client";
 import { FaGithub } from "react-icons/fa";
 import { RxGlobe } from "react-icons/rx";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { containerVariant, fadeUpVariant } from "@/lib/motionVariants";
 
 interface ProjectCardProps {
   name: string;
@@ -12,9 +13,7 @@ interface ProjectCardProps {
   github?: string;
   live?: string;
   techstack: string[];
-  variants: Variants;
 }
-
 
 export const ProjectCard = ({
   name,
@@ -23,12 +22,14 @@ export const ProjectCard = ({
   github,
   live,
   techstack,
-  variants,
 }: ProjectCardProps) => {
   return (
-    <motion.div variants={variants} className="w-full flex flex-col mb-6">
+    <motion.div
+      variants={containerVariant}
+      className="w-full flex flex-col mb-6"
+    >
       <motion.div
-        variants={variants}
+        variants={fadeUpVariant}
         className="w-full bg-background rounded-xl overflow-hidden border border-border relative group"
       >
         <Image
@@ -64,13 +65,13 @@ export const ProjectCard = ({
         </div>
       </motion.div>
 
-      <motion.h3 variants={variants} className="text-2xl font-bold mt-2">
+      <motion.h3 variants={fadeUpVariant} className="text-2xl font-bold mt-2">
         {name}
       </motion.h3>
-      <motion.p variants={variants} className="text-sm">
+      <motion.p variants={fadeUpVariant} className="text-sm">
         {description}
       </motion.p>
-      <motion.div variants={variants} className="flex flex-wrap gap-2 mt-2">
+      <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-2 mt-2">
         {techstack.map((tech) => (
           <Badge color="--color-1" key={tech}>
             {tech}

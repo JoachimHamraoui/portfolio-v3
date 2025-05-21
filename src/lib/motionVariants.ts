@@ -15,7 +15,7 @@ export const fadeUpVariant: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
