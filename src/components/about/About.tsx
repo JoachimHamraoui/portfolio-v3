@@ -1,70 +1,42 @@
 "use client";
 
-import { fadeUpVariant } from "@/lib/motionVariants";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { fadeUpVariant } from "@/lib/motionVariants";
 
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ExtraInfo } from "./extraInfo";
-import { TechStack } from "../techstack/TechStack";
 export const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  return (
-    <div ref={ref} className="w-[1240px] flex flex-col mt-12 space-y-6">
-      <motion.h2
-        className="text-4xl font-bold"
-        variants={fadeUpVariant}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-      >
-        More about me
-      </motion.h2>
+  const isInView = useInView(ref, { once: false });
+  const birthDate = new Date(1999, 0, 29); // Month is 0-indexed: 0 = January
+  const today = new Date();
 
-      <motion.div
-        className="w-full "
+  const age = today.getFullYear() - birthDate.getFullYear();
+  const hasHadBirthdayThisYear =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() &&
+      today.getDate() >= birthDate.getDate());
+
+  const finalAge = hasHadBirthdayThisYear ? age : age - 1;
+
+  return (
+    <div ref={ref} className="w-[1240px] flex flex-col my-24">
+      <motion.p
+        className="text-4xl text-primary w-2/3"
         variants={fadeUpVariant}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <Tabs defaultValue="tab-1">
-          <ScrollArea>
-            <TabsList className="mb-3 gap-1 bg-transparent">
-              <TabsTrigger
-                value="tab-1"
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg data-[state=active]:shadow-none"
-              >
-                About
-              </TabsTrigger>
-              <TabsTrigger
-                value="tab-2"
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg data-[state=active]:shadow-none"
-              >
-                Skills
-              </TabsTrigger>
-              <TabsTrigger
-                value="tab-3"
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-lg data-[state=active]:shadow-none"
-              >
-                Experience
-              </TabsTrigger>
-            </TabsList>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
-          <TabsContent value="tab-1">
-              <ExtraInfo />
-          </TabsContent>
-          <TabsContent value="tab-2">
-            <TechStack />
-          </TabsContent>
-          <TabsContent value="tab-3">
-            <p className="text-muted-foreground p-4 pt-1 text-center text-xs">
-              Content for Tab 3
-            </p>
-          </TabsContent>
-        </Tabs>
-      </motion.div>
+        I&apos;m a {finalAge} year old{" "}
+        <span className="font-semibold">Fullstack Web Developer</span> based in{" "}
+        <span className="font-semibold">Brussels, Belgium</span>. I recently
+        graduated with a <br />
+        Bachelor&apos;s Degree at Erasmushogeschool Brussel.
+        <br /> I&apos;m fluent in French, Dutch and English.
+        <br />
+        <br />
+        Eager to learn more about Web & App Development. I also read, game and
+        do graphic design in my free time.
+      </motion.p>
     </div>
   );
 };
