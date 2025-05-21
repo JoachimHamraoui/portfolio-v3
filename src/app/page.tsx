@@ -5,6 +5,7 @@ import { Showcase } from "@/components/showcase/Showcase";
 import { About } from "@/components/about/About";
 import { TechStack } from "@/components/techstack/TechStack";
 import { Experiences } from "@/components/Experiences/Experiences";
+import { Footer } from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -12,12 +13,13 @@ export default function Home() {
       <SmoothCursor
         cursor={<div className="w-6 h-6 rounded-full backdrop-invert"></div>}
       />
-      <Navigation />
+      {/* <Navigation /> */}
       <Hero />
       <Showcase />
       <TechStack />
       <About />
       <Experiences />
+      <Footer />
     </div>
   );
 }
