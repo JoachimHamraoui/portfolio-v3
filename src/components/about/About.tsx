@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExtraInfo } from "./extraInfo";
+import { TechStack } from "../techstack/TechStack";
 export const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -52,13 +53,10 @@ export const About = () => {
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
           <TabsContent value="tab-1">
-
               <ExtraInfo />
           </TabsContent>
           <TabsContent value="tab-2">
-            <p className="text-muted-foreground p-4 pt-1 text-center text-xs">
-              Content for Tab 2
-            </p>
+            <TechStack />
           </TabsContent>
           <TabsContent value="tab-3">
             <p className="text-muted-foreground p-4 pt-1 text-center text-xs">
