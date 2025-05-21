@@ -6,6 +6,13 @@ import { fadeUpVariant } from "@/lib/motionVariants";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 export const TechStack = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -41,24 +48,30 @@ export const TechStack = () => {
       >
         Skills
       </motion.h2>
-      <div
-        ref={ref}
-        className="w-full my-12 grid grid-cols-6 gap-4 gap-y-16"
-      >
+      <div ref={ref} className="w-full my-12 grid grid-cols-6 gap-4 gap-y-16">
         {techstack.map((item) => (
           <motion.div
-            className="flex items-center justify-space-between"
+            className="flex flex-col items-space-between justify-center"
             key={item}
             variants={fadeUpVariant}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <Image
-              src={`https://cdn.simpleicons.org/${item}`}
-              alt={item}
-              width={100}
-              height={100}
-            />
+            <TooltipProvider delayDuration={0}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Image
+                    src={`https://cdn.simpleicons.org/${item}`}
+                    alt={item}
+                    width={100}
+                    height={100}
+                  />
+                </TooltipTrigger>
+                <TooltipContent className="dark px-2 py-1 text-xs mb-2" showArrow={true}>
+                  {item}
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </motion.div>
         ))}
       </div>
