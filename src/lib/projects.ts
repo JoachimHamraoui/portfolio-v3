@@ -29,57 +29,31 @@ export interface Project {
     },
     {
         id: 2,
-        name: "Manga API", 
-        description: "Docker, NodeJS, API", 
-        github: "https://github.com/JoachimHamraoui/portfolio-starter-JoachimHamraoui", 
+        name: "Bibliomania (Bachelor)", 
+        description: "App to enhance reading in secondary schools.", 
+        github: "https://github.com/JoachimHamraoui/bibliomania", 
         live: "", 
-        techstack: ["NodeJS", "Docker", "React", "PostgreSQL"],
-        keyImage: "/showcase/manga-app.png"
+        techstack: ["NodeJS", "Docker", "React Native", "PostgreSQL", "Expo"],
+        keyImage: "/showcase/bibliomania.png"
     },
     {
         id: 3,
-        name: "Chat App", 
-        description: "Docker, NodeJS, API", 
-        github: "https://github.com/JoachimHamraoui/chat-app", 
+        name: "Medialab Loan", 
+        description: "A way for students to loan items in Medialab.", 
+        github: "https://github.com/JoachimHamraoui/dev4-course-project-bilal-jojo-dev", 
         live: "", 
-        techstack: ["NodeJS", "Websockets", "React"],
-        keyImage: "/showcase/chat-app.png"
+        techstack: ["Kotlin", "Spring", "VueJS", "MVC"],
+        keyImage: "/showcase/Medialab.png"
     },
     {
         id: 4,
-        name: "Manga API", 
-        description: "Docker, NodeJS, API", 
-        github: "https://github.com/JoachimHamraoui/portfolio-starter-JoachimHamraoui", 
+        name: "Planning App", 
+        description: "Planning system for a schoolsystem with admin dashboard.", 
+        github: "https://github.com/JoachimHamraoui/back-end-course-project-JoachimHamraoui", 
         live: "", 
-        techstack: ["NodeJS", "Docker", "React", "PostgreSQL"],
-        keyImage: "/showcase/manga-app.png"
+        techstack: ["PHP", "Laravel Sail", "Docker", "MySQL"],
+        keyImage: "/showcase/Planning.png"
     },
-    {
-        id: 5,
-        name: "Chat App", 
-        description: "Docker, NodeJS, API", 
-        github: "https://github.com/JoachimHamraoui/chat-app", 
-        live: "", 
-        techstack: ["NodeJS", "Websockets", "React"],
-        keyImage: "/showcase/chat-app.png"
-    },
-    {
-        id: 6,
-        name: "Manga API", 
-        description: "Docker, NodeJS, API", 
-        github: "https://github.com/JoachimHamraoui/portfolio-starter-JoachimHamraoui", 
-        live: "", 
-        techstack: ["NodeJS", "Docker", "React", "PostgreSQL"],
-        keyImage: "/showcase/manga-app.png"
-    },
-    {
-        id: 7,
-        name: "Chat App", 
-        description: "Docker, NodeJS, API", 
-        github: "https://github.com/JoachimHamraoui/chat-app", 
-        live: "", 
-        techstack: ["NodeJS", "Websockets", "React"],
-        keyImage: "/showcase/chat-app.png"
-    },
+    
     
   ]
