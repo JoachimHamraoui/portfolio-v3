@@ -34,7 +34,7 @@ export interface Project {
         github: "https://github.com/JoachimHamraoui/bibliomania", 
         live: "", 
         techstack: ["NodeJS", "Docker", "React Native", "PostgreSQL", "Expo"],
-        keyImage: "/showcase/Bibliomania.png"
+        keyImage: "/showcase/bibliomania.png"
     },
     {
         id: 3,

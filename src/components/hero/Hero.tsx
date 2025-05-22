@@ -7,9 +7,9 @@ import { useTheme } from "next-themes";
 import { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 import { motion, useInView } from "framer-motion";
-import { RainbowButton } from "@/components/magicui/rainbow-button";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Button } from "../ui/button";
 
 // Dynamically import the client-only Lottie component
 const LottieClientOnly = dynamic(() => import("../clients/LottieClientOnly"), {
@@ -58,10 +58,10 @@ export const Hero = () => {
       </p>
       <div className="mt-6 flex gap-4">
         <Link href="https://www.linkedin.com/in/joachim-hamraoui-6950b6173/" target="_blank">
-        <RainbowButton variant="outline"><FaLinkedin /> Add me on LinkedIn</RainbowButton>
+        <Button ><FaLinkedin /> Add me on LinkedIn</Button>
       </Link>
       <Link href="https://github.com/JoachimHamraoui" target="_blank">
-        <RainbowButton><FaGithub /> Check out my GitHub</RainbowButton>
+        <Button variant="outline"><FaGithub /> Check out my GitHub</Button>
       </Link>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-6">

@@ -2,9 +2,9 @@
 import { FaGithub } from "react-icons/fa";
 import { RxGlobe } from "react-icons/rx";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { containerVariant, fadeUpVariant } from "@/lib/motionVariants";
+import Image from "next/image";
 
 interface ProjectCardProps {
   name: string;

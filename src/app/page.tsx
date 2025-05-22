@@ -1,4 +1,4 @@
-import { Navigation } from "@/components/navigation/Navigation";
+// import { Navigation } from "@/components/navigation/Navigation";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { Hero } from "@/components/hero/Hero";
 import { Showcase } from "@/components/showcase/Showcase";
