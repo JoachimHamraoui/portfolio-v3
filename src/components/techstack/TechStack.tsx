@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 import { fadeUpVariant } from "@/lib/motionVariants";
 import { motion, useInView } from "framer-motion";
@@ -12,6 +11,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+
+import Image from "next/image";
 
 export const TechStack = () => {
   const ref = useRef(null);
