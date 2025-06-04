@@ -44,7 +44,7 @@ export const Hero = () => {
           animate={isInView ? "visible" : "hidden"}
           className="inline-block" // ✅ important
         >
-          <AuroraText colors={["#f035d7", "#7928CA", "#ff9d0a"]}>
+          <AuroraText colors={["#f7ba2c", "#ea5459"]}>
             Joachim
           </AuroraText>
         </motion.span>
