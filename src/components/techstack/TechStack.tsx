@@ -1,7 +1,7 @@
 "use client";
 
 
-import { fadeUpVariant } from "@/lib/motionVariants";
+import { fadeUpVariant, containerVariant } from "@/lib/motionVariants";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -49,14 +49,12 @@ export const TechStack = () => {
       >
         Skills
       </motion.h2>
-      <div ref={ref} className="w-full my-12 grid grid-cols-6 gap-4 gap-y-16">
+      <motion.div variants={containerVariant} initial="hidden" animate={isInView ? "visible" : "hidden"} ref={ref} className="w-full my-12 grid grid-cols-6 gap-4 gap-y-16">
         {techstack.map((item) => (
           <motion.div
             className="flex flex-col items-space-between justify-center"
             key={item}
             variants={fadeUpVariant}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
           >
             <TooltipProvider delayDuration={0}>
               <Tooltip>
@@ -75,7 +73,7 @@ export const TechStack = () => {
             </TooltipProvider>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
