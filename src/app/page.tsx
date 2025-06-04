@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/navigation/Navigation";
 import { Hero } from "@/components/hero/Hero";
 import { Showcase } from "@/components/showcase/Showcase";
@@ -25,5 +26,6 @@ export default function Home() {
         {/* <Footer /> */}
       </div>
     </CursorProvider>
+
   );
 }

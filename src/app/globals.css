@@ -99,7 +99,13 @@
   50% {
     background-position: 100% 100%;}
   to {
-    background-position: 0% 0%;}}}
+    background-position: 0% 0%;}}
+  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+  @keyframes rainbow {
+  0% {
+    background-position: 0%;}
+  100% {
+    background-position: 200%;}}}
 
 :root {
   /* scrollbar-gutter: stable; */
