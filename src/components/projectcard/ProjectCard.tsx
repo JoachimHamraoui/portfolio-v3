@@ -41,7 +41,12 @@ export const ProjectCard = ({
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out p-4 flex items-end justify-start gap-2">
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out p-4 flex items-end justify-start gap-2"
+          style={{
+            background: `linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7) 100%)`,
+          }}
+        >
           {github && (
             <a
               href={github}
@@ -71,7 +76,10 @@ export const ProjectCard = ({
       <motion.p variants={fadeUpVariant} className="text-sm">
         {description}
       </motion.p>
-      <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-2 mt-2">
+      <motion.div
+        variants={fadeUpVariant}
+        className="flex flex-wrap gap-2 mt-2"
+      >
         {techstack.map((tech) => (
           <Badge color="--color-1" key={tech}>
             {tech}
