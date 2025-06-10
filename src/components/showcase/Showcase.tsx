@@ -10,7 +10,7 @@ export const Showcase = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div ref={ref} className="w-[1240px] mx-auto flex flex-col mt-12 space-y-6">
+    <div ref={ref} className="w-full mx-auto flex flex-col mt-12 space-y-6 scroll-mt-24" id="showcase">
       <motion.h2
         className="text-4xl font-bold"
         variants={fadeUpVariant}

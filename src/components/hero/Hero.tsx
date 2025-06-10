@@ -40,8 +40,8 @@ export const Hero = () => {
   }, [resolvedTheme]);
 
   return (
-    <div className="relative w-[1240px] h-screen flex flex-col justify-center mx-auto">
-      <h1 className="text-8xl font-bold mb-4">
+    <div className="relative w-full h-screen flex flex-col justify-center mx-auto">
+      <h1 className="text-7xl font-bold mb-4">
         Hi, I&apos;m{" "}
         <motion.span
           ref={ref}
@@ -55,7 +55,7 @@ export const Hero = () => {
           <AuroraText colors={["#f7ba2c", "#ea5459"]}>Joachim</AuroraText>
         </motion.span>
       </h1>
-      <p className="text-xl">
+      <p className="text-lg">
         Fullstack Web Developer in Brussels — <br />
         Turning Ideas into User-Focused Digital Products
       </p>

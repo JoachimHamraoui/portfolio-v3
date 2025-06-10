@@ -40,7 +40,7 @@ export const TechStack = () => {
   ];
 
   return (
-    <div className="w-[1240px] mx-auto flex flex-col mt-24">
+    <div ref={ref} id="skills" className="w-full mx-auto flex flex-col mt-24 scroll-mt-24">
       <motion.h2
         className="text-4xl font-bold"
         variants={fadeUpVariant}

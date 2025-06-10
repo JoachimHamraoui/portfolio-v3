@@ -132,8 +132,9 @@ export const Experiences = () => {
 
   return (
     <div
+    id="experiences"
       ref={ref}
-      className="w-[1240px] mx-auto flex flex-col overflow-clip my-24 relative"
+      className="w-full mx-auto flex flex-col overflow-clip my-24 relative scroll-mt-24"
     >
       <motion.h2
         className="text-4xl font-bold mb-6"
