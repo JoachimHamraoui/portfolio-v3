@@ -19,7 +19,7 @@ export const About = () => {
   const finalAge = hasHadBirthdayThisYear ? age : age - 1;
 
   return (
-    <div id="about" className="w-[1240px] mx-auto flex flex-col mt-24 scroll-mt-24">
+    <div id="about" className="w-full mx-auto flex flex-col mt-24 scroll-mt-24">
       <motion.h2
         className="text-4xl font-bold mb-6"
         variants={fadeUpVariant}
@@ -28,7 +28,7 @@ export const About = () => {
       >
         About myself
       </motion.h2>
-      <div ref={ref} className="w-[1240px] flex flex-col">
+      <div ref={ref} className="w-full flex flex-col">
       <motion.p
         className="text-2xl text-primary w-2/3"
         variants={fadeUpVariant}

@@ -11,7 +11,7 @@ import { SmoothCursor } from "@/components/cursor/SmoothCursor";
 export default function Home() {
   return (
     <CursorProvider>
-      <div className="w-full flex flex-col items-center cursor-none">
+      <div className="w-[1200px] flex flex-col items-center mx-auto cursor-none">
         <SmoothCursor
           cursor={
             <div className="w-6 h-6 rounded-full backdrop-invert bg-black/10 dark:bg-white/10" />
