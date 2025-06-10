@@ -5,7 +5,7 @@ import { Showcase } from "@/components/showcase/Showcase";
 import { About } from "@/components/about/About";
 import { TechStack } from "@/components/techstack/TechStack";
 import { Experiences } from "@/components/Experiences/Experiences";
-// import { Footer } from "@/components/footer/Footer";
+import { Footer } from "@/components/footer/Footer";
 import { CursorProvider } from "@/context/CursorContext";
 import { SmoothCursor } from "@/components/cursor/SmoothCursor";
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
         <TechStack />
         <About />
         <Experiences />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </CursorProvider>
 
