@@ -41,7 +41,7 @@ export const Hero = () => {
 
   return (
     <div className="relative w-full h-screen flex flex-col justify-center mx-auto">
-      <h1 className="text-7xl font-bold mb-4">
+      <h1 className="text-6xl xl:text-8xl font-bold mb-4">
         Hi, I&apos;m{" "}
         <motion.span
           ref={ref}
@@ -55,26 +55,30 @@ export const Hero = () => {
           <AuroraText colors={["#f7ba2c", "#ea5459"]}>Joachim</AuroraText>
         </motion.span>
       </h1>
-      <p className="text-lg">
+      <p className="text-sm md:text-lg">
         Fullstack Web Developer in Brussels — <br />
         Turning Ideas into User-Focused Digital Products
       </p>
-      <div className="mt-6 flex gap-4">
+      <div className="mt-6 flex gap-4 flex-wrap">
         <Link
           href="https://www.linkedin.com/in/joachim-hamraoui-6950b6173/"
           target="_blank"
         >
           <Button>
-            <FaLinkedin /> Add me on LinkedIn
+            <FaLinkedin />{" "}
+            <span className="md:inline hidden">Check out my Linkedin</span>
+            <span className="inline md:hidden">Linkedin</span>
           </Button>
         </Link>
         <Link href="https://github.com/JoachimHamraoui" target="_blank">
           <Button variant="outline">
-            <FaGithub /> Check out my GitHub
+            <FaGithub />
+            <span className="md:inline hidden">Check out my Github</span>
+            <span className="inline md:hidden">Github</span>
           </Button>
         </Link>
       </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-6">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-4 md:w-6">
         <LottieClientOnly
           animationData={isDark ? DarkMouse : LightMouse}
           loop={true}

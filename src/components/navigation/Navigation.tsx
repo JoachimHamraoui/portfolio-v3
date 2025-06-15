@@ -22,25 +22,25 @@ export const Navigation = () => {
   }, [resolvedTheme]);
 
   return (
-    <nav className="w-full py-8 fixed bg-background z-50">
+    <nav className="w-[90%] xl:w-[1200px] mx-auto py-4 fixed bg-background z-50">
       <ScrollProgress className="bottom-100 fixed" />
-      <ul className="w-[1200px] mx-auto flex gap-12 items-center">
+      <ul className="w-full xl:w-[1200px] mx-auto flex gap-12 items-center">
         <Image
           src={isDark ? DarkLogo : LightLogo}
           alt="Logo"
           width={28}
           className="mr-12"
         />
-        <Link href="#showcase" className="text-md text-primary">
+        <Link href="#showcase" className="hidden xl:block text-md text-primary">
           Showcase
         </Link>
-        <Link href="#skills" className="text-md text-primary">
+        <Link href="#skills" className=" hidden xl:block text-md text-primary">
           Tech
         </Link>
-        <Link href="#about" className="text-md text-primary">
+        <Link href="#about" className="hidden xl:block text-md text-primary">
           About
         </Link>
-        <Link href="#experiences" className="text-md text-primary">
+        <Link href="#experiences" className="hidden xl:block text-md text-primary">
           Experiences
         </Link>
         <div className="ml-auto">

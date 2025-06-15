@@ -30,13 +30,13 @@ export const About = () => {
       </motion.h2>
       <div ref={ref} className="w-full flex flex-col">
       <motion.p
-        className="text-2xl text-primary w-2/3"
+        className="text-2xl text-primary xl:w-2/3"
         variants={fadeUpVariant}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
         I&apos;m a {finalAge} year old{" "}
-        <span className="font-semibold">Fullstack Web Developer</span> based in{" "}
+        <span className="font-semibold">Fullstack Web Developer</span> based in{" "}<br />
         <span className="font-semibold">Brussels, Belgium</span>. <br /> I recently
         graduated with a
         Bachelor&apos;s Degree at Erasmushogeschool Brussel.

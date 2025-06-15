@@ -12,7 +12,7 @@ export const Showcase = () => {
   return (
     <div ref={ref} className="w-full mx-auto flex flex-col mt-12 space-y-6 scroll-mt-24" id="showcase">
       <motion.h2
-        className="text-4xl font-bold"
+        className="text-2xl md:text-3xl xl:text-4xl font-bold"
         variants={fadeUpVariant}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -21,7 +21,7 @@ export const Showcase = () => {
       </motion.h2>
 
       <motion.div
-        className="w-full grid grid-cols-3 gap-4"
+        className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
         variants={containerVariant}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
