@@ -33,7 +33,7 @@ export const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <Image src={isDark ? DarkLogo : LightLogo} alt="Logo" width={28} />
         
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-primary sm:mb-0">
+          <ul className="flex flex-wrap flex-col md:flex-row md:items-center mb-6 text-sm font-medium text-primary sm:mb-0 mt-8 md:mt-0 gap-2 md:gap-0">
             <li>
               <Link
                 href="https://github.com/JoachimHamraoui"

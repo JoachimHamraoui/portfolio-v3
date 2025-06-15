@@ -70,7 +70,7 @@ export const ProjectCard = ({
         </div>
       </motion.div>
 
-      <motion.h3 variants={fadeUpVariant} className="text-2xl font-bold mt-2">
+      <motion.h3 variants={fadeUpVariant} className="text-lg md:text-xl xl:text-2xl font-bold mt-2">
         {name}
       </motion.h3>
       <motion.p variants={fadeUpVariant} className="text-sm">

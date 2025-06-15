@@ -10,7 +10,7 @@ const items = [
     title: "Multimedia",
     description: (
       <>
-        <h2 className="text-4xl font-bold text-primary mb-4">Multimedia</h2>
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary mb-4">Multimedia</h2>
         <p className="text-primary text-lg">
           Learned basic Web Development skills such as HTML, CSS, Animations and
           JavaScript. During two years, I had to opportunity to start from the
@@ -30,7 +30,7 @@ const items = [
     title: "Interactieve Multimedia",
     description: (
       <>
-        <h2 className="text-4xl font-bold text-primary mb-4">
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary mb-4">
           Interactieve Multimedia Technieken
         </h2>
         <p className="text-primary text-lg">
@@ -52,7 +52,7 @@ const items = [
     title: "Webmaster",
     description: (
       <>
-        <h2 className="text-4xl font-bold text-primary mb-4">Webmaster</h2>
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary mb-4">Webmaster</h2>
         <p className="text-primary text-lg">
           For my extra year at Don Bosco, I needed to go through an internship
           in the field of Web Development. I had the opportunity to work as a
@@ -68,11 +68,11 @@ const items = [
   },
   {
     id: 4,
-    date: "2019 - 2024",
+    date: "2019 -2024",
     title: "Bachelor's Degree",
     description: (
       <>
-        <h2 className="text-4xl font-bold text-primary mb-4">
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary mb-4">
           Bachelor&apos;s Degree
         </h2>
         <p className="text-primary text-lg">
@@ -106,7 +106,7 @@ const items = [
     title: "Fullstack Drupal Developer",
     description: (
       <>
-        <h2 className="text-4xl font-bold text-primary mb-4">
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-primary mb-4">
           Fullstack Drupal Developer
         </h2>
         <p className="text-primary text-lg">
@@ -152,16 +152,16 @@ export const Experiences = () => {
         className="w-full flex flex-col"
       >
         {items.map((item) => (
-          <div key={item.id} className="w-full flex flex-row gap-4 mt-12">
-            <div className="w-1/3">
+          <div key={item.id} className="w-full flex flex-col md:flex-row gap-4 mt-12">
+            <div className="w-full md:w-1/4 xl:w-1/3">
               <motion.h2
                 variants={fadeUpVariant}
-                className="text-4xl text-primary font-bold mb-6"
+                className="text-xl md:text-2xl xl:text-4xl text-primary font-bold -mb-4 md:mb-0"
               >
                 {item.date}
               </motion.h2>
             </div>
-            <motion.div variants={fadeUpVariant} className="w-2/3">
+            <motion.div variants={fadeUpVariant} className="w-5/6 md:w-3/4 xl:w-2/3">
               {item.description}
             </motion.div>
           </div>

@@ -49,7 +49,7 @@ export const TechStack = () => {
       >
         Skills
       </motion.h2>
-      <motion.div variants={containerVariant} initial="hidden" animate={isInView ? "visible" : "hidden"} ref={ref} className="w-full my-12 grid grid-cols-6 gap-4 gap-y-16">
+      <motion.div variants={containerVariant} initial="hidden" animate={isInView ? "visible" : "hidden"} ref={ref} className="w-full my-12 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 gap-y-16 ">
         {techstack.map((item) => (
           <motion.div
             className="flex flex-col items-space-between justify-center"
@@ -59,12 +59,15 @@ export const TechStack = () => {
             <TooltipProvider delayDuration={0}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Image
+                  <div className="flex flex-col items-center justify-center">
+                    <Image
                     src={`https://cdn.simpleicons.org/${item}`}
                     alt={item}
                     width={100}
                     height={100}
+                    className=""
                   />
+                  </div>
                 </TooltipTrigger>
                 <TooltipContent className="dark px-2 py-1 text-xs mb-2" showArrow={true}>
                   {item}
