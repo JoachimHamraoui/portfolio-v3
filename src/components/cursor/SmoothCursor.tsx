@@ -43,7 +43,7 @@ export function SmoothCursor({ cursor }: Props) {
         willChange: "transform",
       }}
       animate={{
-        scale: isHovered ? 4 : 1,
+        scale: isHovered ? 8 : 1,
       }}
       transition={{
         type: "spring",
