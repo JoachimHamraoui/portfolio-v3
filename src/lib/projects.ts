@@ -11,12 +11,12 @@ export interface Project {
   export const projects: Project[] = [
     {
         id: 0,
-        name: "Manga API", 
-        description: "Docker, NodeJS, API", 
-        github: "https://github.com/JoachimHamraoui/portfolio-starter-JoachimHamraoui", 
-        live: "", 
-        techstack: ["NodeJS", "Docker", "React", "PostgreSQL"],
-        keyImage: "/showcase/manga-app.png"
+        name: "Invois", 
+        description: "Invoice app to generate Invoice PDF's.", 
+        github: "https://github.com/JoachimHamraoui/invois", 
+        live: "https://invois-cyan.vercel.app/", 
+        techstack: ["NextJS", "TailwindCSS", "PostgreSQL", "Typescript"],
+        keyImage: "/showcase/invois.png"
     },
     {
         id: 1,
@@ -54,6 +54,13 @@ export interface Project {
         techstack: ["PHP", "Laravel Sail", "Docker", "MySQL"],
         keyImage: "/showcase/Planning.png"
     },
-    
-    
+    {
+        id: 5,
+        name: "Manga API", 
+        description: "Docker, NodeJS, API", 
+        github: "https://github.com/JoachimHamraoui/portfolio-starter-JoachimHamraoui", 
+        live: "", 
+        techstack: ["NodeJS", "Docker", "React", "PostgreSQL"],
+        keyImage: "/showcase/manga-app.png",
+    },
   ]
