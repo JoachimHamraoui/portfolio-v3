@@ -51,7 +51,7 @@ export const Hero = () => {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-         Joachim
+         Joachim.
         </motion.span>
       </h1>
       <p className="text-sm md:text-lg">
