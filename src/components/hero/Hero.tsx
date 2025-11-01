@@ -1,6 +1,5 @@
 "use client";
 
-import { AuroraText } from "@/components/magicui/aurora-text";
 import LightMouse from "../../../public/scrolldown-lightmode.json";
 import DarkMouse from "../../../public/scrolldown-darkmode.json";
 import { useTheme } from "next-themes";
@@ -52,7 +51,7 @@ export const Hero = () => {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          <AuroraText colors={["#f7ba2c", "#ea5459"]}>Joachim</AuroraText>
+         Joachim
         </motion.span>
       </h1>
       <p className="text-sm md:text-lg">
